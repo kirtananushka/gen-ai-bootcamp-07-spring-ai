@@ -1,0 +1,157 @@
+{
+  "info": {
+    "name": "Gen AI Training Module 7 API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Simple Query",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"query\": \"Why people don't fly?\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/chat",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "chat"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Upload Files",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "files",
+              "type": "file",
+              "src": ""
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8080/documents/upload",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "documents",
+            "upload"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PDF Query - 1",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"query\": \"Which character collects vintage video games?\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/documents/query",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "documents",
+            "query"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PDF Query - 2",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"query\": \"Which character has a younger sister and a German Shepherd named Max?\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/documents/query",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "documents",
+            "query"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PDF Query - 3",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"query\": \"Which character enjoys gardening and reading classic literature in their free time?\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/documents/query",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "documents",
+            "query"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
