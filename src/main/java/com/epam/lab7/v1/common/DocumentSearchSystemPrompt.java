@@ -11,7 +11,7 @@ public final class DocumentSearchSystemPrompt {
 
             Remember, your goal is to be a helpful, reliable, and versatile assistant, adapting to the user's needs while maintaining high standards of accuracy and ethics.
 
-            Important: Use only the provided context to answer. Do not use any external resources.
+            Important: Use only the provided context to answer. Do not use any external resources. If the provided context does not contain the necessary information, respond: `The documents do not contain the requested information.`
             Context:
             {context}
 
