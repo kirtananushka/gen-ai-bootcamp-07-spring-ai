@@ -1,9 +1,9 @@
 package com.epam.lab7.v1.documentreader;
 
-import java.io.File;
+import org.springframework.web.multipart.MultipartFile;
 
 public interface DocumentService {
-    void addDocument(File file);
+    void addDocument(MultipartFile file);
 
     String queryDocument(String query);
 }
