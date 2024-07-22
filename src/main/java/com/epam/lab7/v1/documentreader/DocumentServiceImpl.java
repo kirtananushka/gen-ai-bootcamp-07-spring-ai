@@ -38,21 +38,12 @@ public class DocumentServiceImpl implements DocumentService {
     }
 
     private String getDocuments(String query) {
-        return getContext(chat.vectorStore().similaritySearch(query));
+        return getContext(chat.vectorStore().similaritySearch(SearchRequest.query(query).withTopK(3)));
     }
 
     private String getContext(List<Document> documents) {
         return documents.stream()
                 .map(Document::getContent)
-                .findFirst()
-                .orElse("No documents found");
-    }
-
-    @SneakyThrows
-    private PdfDocument readDocument(File pdfFile) {
-        PDDocument pdDocument = Loader.loadPDF(pdfFile);
-        PDFTextStripper pdfTextStripper = new PDFTextStripper();
-        String pdfText = pdfTextStripper.getText(pdDocument);
-        return new PdfDocument(pdfText);
+                .collect(Collectors.joining("\n"));
     }
 }
